@@ -1,19 +1,32 @@
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import io from "socket.io-client";
 import { SocketURL } from "../../../constants";
+import Sidebar from "./Sidebar";
+import MessengerNavigation from "./Navigation";
 
 let socket;
 
+export enum TabOptions {
+  Contacts = "contacts",
+  Conversations = "conversations",
+}
+
 const Messenger = () => {
   const router = useRouter();
-  console.log(router.query);
 
-  useEffect(() => {
-    socket = io(SocketURL, { transports: ["websocket"] });
-  }, [router.query]);
+  // useEffect(() => {
+  //   socket = io(SocketURL, { transports: ["websocket"] });
+  // }, [router.query]);
 
-  return <>messenger</>;
+  return (
+    <main className="messenger">
+      <div className="layout">
+        <MessengerNavigation />
+        <Sidebar />
+      </div>
+    </main>
+  );
 };
 
 export default Messenger;
