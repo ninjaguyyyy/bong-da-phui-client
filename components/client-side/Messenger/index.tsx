@@ -4,6 +4,7 @@ import io from "socket.io-client";
 import { SocketURL } from "../../../constants";
 import Sidebar from "./Sidebar";
 import MessengerNavigation from "./Navigation";
+import ConversationDetail from "./ConversationDetail";
 
 let socket;
 
@@ -24,6 +25,7 @@ const Messenger = () => {
       <div className="layout">
         <MessengerNavigation />
         <Sidebar />
+        <ConversationDetail />
       </div>
     </main>
   );
