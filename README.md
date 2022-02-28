@@ -27,8 +27,20 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Kỹ thuật
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Login with Google
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Tạo 1 Web Application Google Client => nhận được Client_Id 
+
+Front-end:
+- use package react-google-login truyền Client_Id vừa rồi
+- có thể login bằng Google và nhận thông tin nick google đó (id_token, email, ...)
+- gửi id_token xuống cho back-end để nó check
+- nhận access token, save lại 
+
+Back-end:
+- use package google-auth-library truyền Client_Id
+- dùng hàm để xác thực id_token
+- check tồn tại để tạo tài khoản mới
+- trả về access token
