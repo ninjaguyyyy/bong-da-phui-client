@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
-import { SocketURL } from "../../../constants";
 import Sidebar from "./Sidebar";
 import MessengerNavigation from "./Navigation";
 import ConversationDetail from "./ConversationDetail";

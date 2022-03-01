@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="#">Bóng đá Phủi!</a>
+          Welcome to <a href="#">Bong da Phui!</a>
         </h1>
 
         <p className={styles.description}>The system is developing ... </p>
@@ -24,19 +24,18 @@ const Home: NextPage = () => {
           <Link href="/messenger">
             <a className={styles.card}>
               <h2>Messenger &rarr;</h2>
-              <p>
-                Feature use Socket IO Client to connect with Server. Beside,
-                online/offline users
-              </p>
+              <p>Feature use Socket IO Client to connect with Server.</p>
             </a>
           </Link>
 
-          <a href="#" className={styles.card}>
-            <h2>Developing &rarr;</h2>
-            <p>
-              This feature is developing. Please wait for some day to enjoy it
-            </p>
-          </a>
+          <Link href="/login">
+            <a className={styles.card}>
+              <h2>Login &rarr;</h2>
+              <p>
+                User can login to use specified features and save information.
+              </p>
+            </a>
+          </Link>
 
           <a href="#" className={styles.card}>
             <h2>Developing &rarr;</h2>
